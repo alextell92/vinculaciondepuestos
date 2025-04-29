@@ -1,65 +1,99 @@
-<p>valuacion-puestos-form works!</p>
-
-<div>
-    <form>
-        <div class="mb-3">
-          <label  class="form-label">Nombre trabajador:</label>
-          <input type="text" class="form-control"  aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Preparación academica</label>
-          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option selected>Seleccionar</option>
-            @for (item of this.preparacionAcademica_list ; track item) {
-                <option value="item.value"> {{item.descripcion}}</option>
-              }
-          </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Experiencia</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Seleccionar</option>
-              @for (item of this.experiencia_list; track item) {
-                  <option value="item.value"> {{item.descripcion}}</option>
-                }
-            </select>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Responsabilidad</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Seleccionar</option>
-              @for (item of  this.responsabilidad_list; track item) {
-                  <option value="item.value"> {{item.descripcion}}</option>
-                }
-            </select>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Habilidad Mental</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Seleccionar</option>
-              @for (item of this.habilidadMental_list; track item) {
-                  <option value="item.value"> {{item.descripcion}}</option>
-                }
-            </select>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Esfuerzo físico</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Seleccionar</option>
-              @for (item of this.esfuerzoFisico_list; track item) {
-                  <option value="item.value"> {{item.descripcion}}</option>
-                }
-            </select>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Conocimientos</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Seleccionar</option>
-              @for (item of this.conocimientos_list; track item) {
-                  <option value="item.value"> {{item.descripcion}}</option>
-                }
-            </select>
-          </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-      </form>
+<div class="formulario">
+  <form [formGroup]="miFormulario" (ngSubmit)="onSubmit()" class="form">
+    <div class="mb-3">
+      <label class="form-label">Nombre trabajador:</label>
+      <input
+        type="text"
+        name="nombreTrabajador"
+        class="form-control"
+        aria-describedby="emailHelp"
+        formControlName="nombreTrabajador"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Preparación academica</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="preparacionAcademica"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.preparacionAcademica_list ; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Experiencia</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="experiencia"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.experiencia_list; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Responsabilidad</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="responsabilidad"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.responsabilidad_list; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Habilidad Mental</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="habilidadMental"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.habilidadMental_list; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Esfuerzo físico</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="esfuerzoFisico"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.esfuerzoFisico_list; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Conocimientos</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="conocimiento"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.conocimientos_list; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <button
+      type="submit"
+      [disabled]="miFormulario.invalid"
+      class="btn btn-primary"
+    >
+      Guardar
+    </button>
+  </form>
 </div>

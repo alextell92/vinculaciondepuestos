@@ -1,0 +1,28 @@
+<div class="tabla-responsive">
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Conocimiento</th>
+        <th>Esfuerzo Fisico</th>
+        <th>Experiencia</th>
+        <th>Habilidad Mental</th>
+        <th>Preparacion Academica</th>
+        <th>Responsabilidad</th>
+        <th>Suma</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datos">
+        <td>{{ item.nombreTrabajador }}</td>
+        <td>{{ item.conocimiento }}</td>
+        <td>{{ item.esfuerzoFisico }}</td>
+        <td>{{ item.experiencia }}</td>
+        <td>{{ item.habilidadMental }}</td>
+        <td>{{ item.preparacionAcademica }}</td>
+        <td>{{ item.responsabilidad }}</td>
+        <td> {{total}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
