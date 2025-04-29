@@ -1,26 +1,27 @@
 <div class="headerMain">
-    <!-- Botón hamburguesa (visible en pantallas pequeñas) -->
-    <div class="hamburgesa">
-      <button class="menu-toggle" [class.open]="menuOpen" (click)="toggleMenu()">
-        ☰
-      </button>
+  <!-- Botón hamburguesa (visible en pantallas pequeñas) -->
+  <div class="hamburgesa">
+    <button class="menu-toggle" [class.open]="menuOpen" (click)="toggleMenu()">
+      ☰
+    </button>
+  </div>
+  <!-- Contenedor del menú y control de usuario -->
+  <div class="menu-container" [class.open]="menuOpen">
+    <div class="logo">
+      <img src="../../../assets/img.png" height="55px" width="55px" />
     </div>
-    <!-- Contenedor del menú y control de usuario -->
-    <div class="menu-container" [class.open]="menuOpen">
-      <div class="logo">
-        <img src="../../../assets/img.png" height="55px" width="55px" />
-      </div>
-      <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="/Home">Inicio</a></li>
-             
-          </ul>
-          <ul>
-            <li><a href="/valuacionPuestos">Form</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="/Home">Inicio</a></li>
+        </ul>
+        <ul>
+          <li><a href="/valuacionPuestos">Form</a></li>
+        </ul>
+        <ul>
+          <li><a href="/verInformacion">Ver informacion</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
-  
+</div>
