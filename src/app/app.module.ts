@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
@@ -11,6 +10,10 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { firebaseConfig } from "../enviroments/enviroment";
 import { VerinformacionComponent } from './verinformacion/verinformacion.component';
+import { EscalasPuntuacionFormComponent } from './components/escalas-puntuacion-form/escalas-puntuacion-form.component';
+import { ComparacionSalarialFormComponent } from './components/comparacion-salarial-form/comparacion-salarial-form.component';
+import { PlanComunicacionFormComponent } from './components/plan-comunicacion-form/plan-comunicacion-form.component';
+import { EvaluacionPuestosFormComponent } from './components/evaluacion-puestos-form/evaluacion-puestos-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,10 @@ import { VerinformacionComponent } from './verinformacion/verinformacion.compone
     HeaderComponent,
     ValuacionPuestosFormComponent,
     VerinformacionComponent,
+    EscalasPuntuacionFormComponent,
+    ComparacionSalarialFormComponent,
+    PlanComunicacionFormComponent,
+    EvaluacionPuestosFormComponent,
   ],
   imports: [
     BrowserModule,
