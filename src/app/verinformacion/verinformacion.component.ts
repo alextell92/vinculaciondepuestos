@@ -8,23 +8,44 @@ import { ControlService } from "../services/control.service";
 })
 export class VerinformacionComponent {
   datos: any[] = [];
+  top3: any[] = [];
   total: any;
 
   constructor(private controlService: ControlService) {
     this.controlService.obtenerDatos().subscribe((resp) => {
       this.datos = resp;
+      this.obtenertop3()
+      
     });
+   
   }
 
   getTotal(item: any): number {
-    return Number(item.conocimiento)
-       + Number(item.esfuerzoFisico)
-       + Number(item.experiencia)
-       + Number(item.habilidadMental)
-       + Number(item.preparacionAcademica)
-       + Number(item.responsabilidad)
-       + Number(item.puesto);
+    return (
+      Number(item.conocimiento) +
+      Number(item.esfuerzoFisico) +
+      Number(item.experiencia) +
+      Number(item.habilidadMental) +
+      Number(item.preparacionAcademica) +
+      Number(item.responsabilidad)
+    );
   }
 
+  obtenertop3() {
+    // Ordenar por edad de mayor a menor
+    const criterios = ['habilidadMental', 'responsabilidad', 'experiencia', 'conocimiento', 'preparacionAcademica','esfuerzoFisico'];
 
+  
+
+this.top3 = this.datos.map(data => {
+  const puntajeTotal = criterios.reduce((sum, key) => sum + parseInt(data[key] || '0'), 0);
+  return {
+    nombreTrabajador: data.nombreTrabajador,
+    puntajeTotal
+  };
+}).sort((a, b) => b.puntajeTotal - a.puntajeTotal); // ordenar de mayor a menor
+
+console.log(this.top3);
+    
+  }
 }

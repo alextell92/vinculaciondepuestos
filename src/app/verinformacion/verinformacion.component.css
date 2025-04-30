@@ -1,30 +1,40 @@
 .tabla-responsive {
   display: flex;
   flex-direction: column;
-    width: 100%;
-    overflow-x: auto;
-    padding: 20px;
-  }
-  
-  .tabla {
-    width: 100%;
-    min-width: 500px; /* puedes ajustar este valor si lo deseas */
-    border-collapse: collapse;
-  }
-  
-  .tabla th,
-  .tabla td {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  
-  .tabla th {
-    background-color: #f4f4f4;
-    font-weight: 600;
-  }
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+}
 
-  th{
-   
+.tabla-responsive-top3 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.tabla {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.tabla th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tabla-responsive-top3 {
+    width: 100%;
   }
-  
+}

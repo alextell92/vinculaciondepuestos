@@ -157,38 +157,30 @@ export class ListasValuacionService {
       },
       {
         value: 4,
-        descripcion: "Operador de caldera",
-      },
-      {
-        value: 5,
         descripcion: "Técnico en aire acondicionado y ref.",
       },
       {
+        value: 5,
+        descripcion: "Electricista",
+      },
+      {
         value: 6,
-        descripcion: "Electricista",
-      },
-      {
-        value: 7,
-        descripcion: "Electricista",
-      },
-      {
-        value: 8,
         descripcion: "Plomero",
       },
       {
-        value: 9,
+        value: 7,
         descripcion: "Carpintero",
       },
       {
-        value: 10,
+        value: 8,
         descripcion: "Jardinero",
       },
       {
-        value: 11,
+        value: 9,
         descripcion: "Albañil",
       },
       {
-        value: 12,
+        value: 10,
         descripcion: "Pintor",
       }
     ];
