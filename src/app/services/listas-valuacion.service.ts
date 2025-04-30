@@ -10,6 +10,7 @@ export class ListasValuacionService {
   habilidadMental_list: any[] = [];
   esfuerzoFisico_list: any[] = [];
   conocimientos_list: any[] = [];
+  puestos_list:any[] = [];
 
   constructor() {
     this.definicionListaPrepacionAcad();
@@ -18,6 +19,7 @@ export class ListasValuacionService {
     this.definicionListaHabilidadMental();
     this.definicionListaEsfuerzoFisico();
     this.definicionListaConocimietos();
+    this.definicionListaPuestos();
   }
 
   definicionListaPrepacionAcad(): void {
@@ -135,6 +137,60 @@ export class ListasValuacionService {
         value: 3,
         descripcion: "GRADO 3 AVANZADO",
       },
+    ];
+  }
+
+  definicionListaPuestos(): void {
+    //Lista de experiencia
+    this.conocimientos_list = [
+      {
+        value: 1,
+        descripcion: "Jefe de mantenimiento",
+      },
+      {
+        value: 2,
+        descripcion: "Fogonero",
+      },
+      {
+        value: 3,
+        descripcion: "Operador de caldera",
+      },
+      {
+        value: 4,
+        descripcion: "Operador de caldera",
+      },
+      {
+        value: 5,
+        descripcion: "Técnico en aire acondicionado y ref.",
+      },
+      {
+        value: 6,
+        descripcion: "Electricista",
+      },
+      {
+        value: 7,
+        descripcion: "Electricista",
+      },
+      {
+        value: 8,
+        descripcion: "Plomero",
+      },
+      {
+        value: 9,
+        descripcion: "Carpintero",
+      },
+      {
+        value: 10,
+        descripcion: "Jardinero",
+      },
+      {
+        value: 11,
+        descripcion: "Albañil",
+      },
+      {
+        value: 12,
+        descripcion: "Pintor",
+      }
     ];
   }
 }

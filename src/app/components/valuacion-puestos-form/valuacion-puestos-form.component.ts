@@ -23,6 +23,8 @@ export class ValuacionPuestosFormComponent {
   habilidadMental_list: any[] = [];
   esfuerzoFisico_list: any[] = [];
   conocimientos_list: any[] = [];
+  puestos_list:any[] = [];
+
 
   constructor(
     _listasService: ListasValuacionService,
@@ -36,6 +38,7 @@ export class ValuacionPuestosFormComponent {
     this.habilidadMental_list = _listasService.habilidadMental_list;
     this.esfuerzoFisico_list = _listasService.esfuerzoFisico_list;
     this.conocimientos_list = _listasService.conocimientos_list;
+    this.puestos_list= _listasService.puestos_list;
 
     this.miFormulario = this.fb.group({
       nombreTrabajador: new FormControl("", Validators.required),
