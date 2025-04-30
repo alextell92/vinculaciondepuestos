@@ -1,112 +1,110 @@
 .headerMain {
-    background-color: steelblue;
-    color: white;
-    padding: 0 10px 0 10px;
-   
-    border: 1px solid #000;
-  }
+  background-color: steelblue;
+  color: white;
+  padding: 0 5px 0 5px;
+  border: 1px solid #000;
+
+  justify-items: right;
+}
+
+.cuenta {
+  display: grid;
+  justify-items: center;
+  justify-content: right;
+}
+.logo {
+  flex-shrink: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+ 
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none; /* Quita el marcador de la lista */
+}
+
+li a {
+  color: inherit; /* Hereda el color del elemento padre o lo puedes especificar */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
   
-  .cuenta {
-    display: grid;
-    justify-items: center;
-    justify-content: right;
-  }
-  .logo {
-    flex-shrink: 0;
-  }
   
-  .menu {
-    flex-grow: 1;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+  padding: 10px;
+}
+
+.acceso {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Avatar dentro del acceso */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .headerMain {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  
-  .menu ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+  .menu{
+    font-size: 12px;
   }
-  
-  li {
-    list-style: none; /* Quita el marcador de la lista */
-  }
-  
-  li a {
-    color: inherit;       /* Hereda el color del elemento padre o lo puedes especificar */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-  }
-  
   .menu-container {
-    display: flex;   
-    gap: 1rem;
-    display: grid;
-    grid-template-columns: 50px repeat(2, 1fr);
-    padding: 10px;
-    
-    
-  }
-  
-  .acceso {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  /* Avatar dentro del acceso */
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  /* Botón hamburguesa */
-  .menu-toggle {
     display: none;
-    background: none;
-    border: none;
-    
-    cursor: pointer;
-  
+    flex-direction: column;
   }
-  
-  /* Estilo responsivo */
-  @media (max-width: 768px) {
-  
-  
-    .headerMain {
-     
-      flex-wrap: wrap;
-      justify-content: space-between;
-     
-    }
-    .menu-container {
-      display: none;
-      flex-direction: column;
-      
-    
-    }
-  
-    .menu-container.open {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: flex;  
-      justify-content: right;
-      font-size: 2.5rem;
-      color: white;
-      }
-  
-    .hamburgesa{
-      display: flex;
-      justify-content: right;
-      font-size: 2.5rem;
-      color: white;
-    }
-  
-  
+
+  .menu-container.open {
+    display: flex;
   }
-  
+
+  .menu-toggle {
+    display: flex;
+    justify-content: right;
+    font-size: 2.0rem;
+    color: white;
+  }
+
+  img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .hamburgesa {
+    display: flex;
+    justify-content: right;
+    font-size: 0.5rem;
+    color: white;
+  }
+}
