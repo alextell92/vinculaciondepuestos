@@ -14,18 +14,19 @@ export class VerinformacionComponent {
     this.controlService.obtenerDatos().subscribe((resp) => {
       this.datos = resp;
 
-      this.total = this.datos.reduce(
-        (acc, item) => {
-          acc.conocimiento += Number(item.conocimiento) || 0;
-          acc.esfuerzoFisico += Number(item.esfuerzoFisico) || 0;
-          acc.experiencia += Number(item.experiencia) || 0;
-          acc.habilidadMental += Number(item.habilidadMental) || 0;
-          acc.preparacionAcademica += Number(item.preparacionAcademica) || 0;
-          acc.responsabilidad+=Number(item.responsabilidad)||0
-          return acc;
-        },
-        { conocimiento: 0, esfuerzoFisico: 0, experiencia: 0, habilidadMental: 0, preparacionAcademica: 0,responsabilidad:0 }
-      );
+  
     });
   }
+
+  getTotal(item: any): number {
+    return Number(item.conocimiento)
+       + Number(item.esfuerzoFisico)
+       + Number(item.experiencia)
+       + Number(item.habilidadMental)
+       + Number(item.preparacionAcademica)
+       + Number(item.responsabilidad)
+       + Number(item.puesto);
+  }
+
+
 }

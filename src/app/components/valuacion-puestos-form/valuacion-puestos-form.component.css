@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
   font-family: "Segoe UI", sans-serif;
   background-color: #fff;
@@ -14,7 +14,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: center;
   align-content: center;
 }
@@ -22,19 +21,19 @@
 .mb-3 {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+ 
 }
 
 .form-group {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  gap: 1rem;
+
   margin-bottom: 1.5rem;
 }
 
 input {
-  width: 230px;
+  width: 550px;
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -75,7 +74,7 @@ label {
 }
 
 select {
-  width: 250px;
+  width: 550px;
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -99,4 +98,16 @@ select:focus {
   label {
     margin-bottom: 0.3rem;
   }
+  .mb-3{
+    font-size: 13px;
+  }
+
+
+input {
+  width: 250px;
+}
+
+select{
+  width: 250px;
+}
 }
