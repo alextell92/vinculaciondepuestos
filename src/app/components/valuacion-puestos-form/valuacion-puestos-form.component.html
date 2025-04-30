@@ -11,6 +11,19 @@
       />
     </div>
     <div class="mb-3">
+      <label class="form-label">Puesto</label>
+      <select
+        class="form-select form-select-lg mb-3"
+        formControlName="puesto"
+        aria-label=".form-select-lg example"
+      >
+        <option [ngValue]="null" disabled>Seleccionar</option>
+        @for (item of this.puestos_list ; track item) {
+        <option [value]="item.value">{{ item.descripcion }}</option>
+        }
+      </select>
+    </div>
+    <div class="mb-3">
       <label class="form-label">Preparación academica</label>
       <select
         class="form-select form-select-lg mb-3"

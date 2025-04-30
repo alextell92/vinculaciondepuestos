@@ -1,6 +1,9 @@
 .tabla-responsive {
+  display: flex;
+  flex-direction: column;
     width: 100%;
     overflow-x: auto;
+    padding: 20px;
   }
   
   .tabla {

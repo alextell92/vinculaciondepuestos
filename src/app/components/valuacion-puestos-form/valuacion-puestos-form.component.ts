@@ -48,6 +48,7 @@ export class ValuacionPuestosFormComponent {
       habilidadMental: new FormControl(null, Validators.required),
       esfuerzoFisico: new FormControl(null, Validators.required),
       conocimiento: new FormControl(null, Validators.required),
+      puesto: new FormControl(null, Validators.required),
     });
   }
 

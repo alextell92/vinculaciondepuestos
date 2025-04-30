@@ -9,6 +9,7 @@
         <th>Habilidad Mental</th>
         <th>Preparacion Academica</th>
         <th>Responsabilidad</th>
+        <th>Puesto</th>
         <th>Suma</th>
       </tr>
     </thead>
@@ -21,7 +22,8 @@
         <td>{{ item.habilidadMental }}</td>
         <td>{{ item.preparacionAcademica }}</td>
         <td>{{ item.responsabilidad }}</td>
-        <td> {{total}}</td>
+        <td>{{ item.puesto }}</td>
+        <td> {{getTotal(item)}}</td>
       </tr>
     </tbody>
   </table>

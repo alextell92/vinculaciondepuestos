@@ -142,7 +142,7 @@ export class ListasValuacionService {
 
   definicionListaPuestos(): void {
     //Lista de experiencia
-    this.conocimientos_list = [
+    this.puestos_list = [
       {
         value: 1,
         descripcion: "Jefe de mantenimiento",
