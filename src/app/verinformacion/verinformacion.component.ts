@@ -13,8 +13,6 @@ export class VerinformacionComponent {
   constructor(private controlService: ControlService) {
     this.controlService.obtenerDatos().subscribe((resp) => {
       this.datos = resp;
-
-  
     });
   }
 

@@ -2,27 +2,29 @@
   <table class="tabla">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Conocimiento</th>
-        <th>Esfuerzo Fisico</th>
-        <th>Experiencia</th>
-        <th>Habilidad Mental</th>
-        <th>Preparacion Academica</th>
-        <th>Responsabilidad</th>
-        <th>Puesto</th>
+        <th style="background-color:rgb(255, 234, 0); color: white;">Nombre</th>
+        <th style="background-color:rgb(255, 234, 0); color: white;">Puesto</th>
+        <th style="background-color:rgb(240, 146, 138); color: white;">Conocimiento</th>
+        <th style="background-color:aqua; color: white; " >Esfuerzo Fisico</th>
+        <th style="background-color:blueviolet; color: white;">Experiencia</th>
+        <th style="background-color:rgb(242, 215, 13);  color: white;">Habilidad Mental</th>
+        <th style="background-color:deepskyblue;  color: white;">Preparacion Academica</th>
+        <th style="background-color: forestgreen;  color: white;">Responsabilidad</th>
+       
         <th>Suma</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of datos">
         <td>{{ item.nombreTrabajador }}</td>
+        <td>{{ item.puesto }}</td>
         <td>{{ item.conocimiento }}</td>
         <td>{{ item.esfuerzoFisico }}</td>
         <td>{{ item.experiencia }}</td>
         <td>{{ item.habilidadMental }}</td>
         <td>{{ item.preparacionAcademica }}</td>
         <td>{{ item.responsabilidad }}</td>
-        <td>{{ item.puesto }}</td>
+      
         <td> {{getTotal(item)}}</td>
       </tr>
     </tbody>
