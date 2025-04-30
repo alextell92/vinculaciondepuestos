@@ -37,7 +37,7 @@ export class VerinformacionComponent {
 
   
 
-this.top3 = this.datos.map(data => {
+const arreglo= this.datos.map(data => {
   const puntajeTotal = criterios.reduce((sum, key) => sum + parseInt(data[key] || '0'), 0);
   return {
     nombreTrabajador: data.nombreTrabajador,
@@ -45,7 +45,9 @@ this.top3 = this.datos.map(data => {
   };
 }).sort((a, b) => b.puntajeTotal - a.puntajeTotal); // ordenar de mayor a menor
 
-console.log(this.top3);
+this.top3 = arreglo.slice(0, 3);
+
+console.log(this.top3); // [10, 20, 30]
     
   }
 }
