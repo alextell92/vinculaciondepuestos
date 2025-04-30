@@ -1,15 +1,16 @@
+
 <div class="tabla-responsive">
   <table class="tabla">
     <thead>
       <tr>
-        <th style="background-color:rgb(255, 234, 0); color: white;">Nombre</th>
-        <th style="background-color:rgb(255, 234, 0); color: white;">Puesto</th>
-        <th style="background-color:rgb(240, 146, 138); color: white;">Conocimiento</th>
-        <th style="background-color:aqua; color: white; " >Esfuerzo Fisico</th>
-        <th style="background-color:blueviolet; color: white;">Experiencia</th>
-        <th style="background-color:rgb(242, 215, 13);  color: white;">Habilidad Mental</th>
-        <th style="background-color:deepskyblue;  color: white;">Preparacion Academica</th>
-        <th style="background-color: forestgreen;  color: white;">Responsabilidad</th>
+        <th style="background-color:rgb(252, 243, 207); color: gray;">Nombre</th>
+        <th style="background-color:rgb(252, 243, 207); color: gray;">Puesto</th>
+        <th style="background-color:rgb(245, 183, 177); color: gray;">Conocimiento</th>
+        <th style="background-color:#85c1e9; color: gray; " >Esfuerzo Físico</th>
+        <th style="background-color:#c39bd3; color: gray;">Experiencia</th>
+        <th style="background-color:rgb(242, 215, 13);  color: gray;">Habilidad Mental</th>
+        <th style="background-color:deepskyblue;  color: gray;">Preparacion Academica</th>
+        <th style="background-color: #82e0aa;  color: gray;">Responsabilidad</th>
        
         <th>Suma</th>
       </tr>
@@ -24,7 +25,6 @@
         <td>{{ item.habilidadMental }}</td>
         <td>{{ item.preparacionAcademica }}</td>
         <td>{{ item.responsabilidad }}</td>
-      
         <td> {{getTotal(item)}}</td>
       </tr>
     </tbody>

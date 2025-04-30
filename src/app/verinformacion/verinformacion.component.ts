@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { ControlService } from "../services/control.service";
 
 @Component({
-  selector: "app-verinformacion",
+  selector: "<app-verinformacion>",
   templateUrl: "./verinformacion.component.html",
   styleUrl: "./verinformacion.component.css",
 })
