@@ -44,10 +44,8 @@ const arreglo= this.datos.map(data => {
     puntajeTotal
   };
 }).sort((a, b) => b.puntajeTotal - a.puntajeTotal); // ordenar de mayor a menor
-
 this.top3 = arreglo.slice(0, 3);
 
-console.log(this.top3); // [10, 20, 30]
     
   }
 }
