@@ -1,9 +1,16 @@
 
-<div class="tabla-responsive-top3">
+<div *ngIf="cargando" [ngClass]="{ 'loader-container': true, 'fade-out': ocultarLoader }">
+  <div class="loader-content">
+    <img src="../../assets/cargando.gif" alt="Cargando..." class="loader" />
+    <p class="mensaje-loader">Preparando contenido…</p>
+  </div>
+</div>
+
+<div class="tabla-responsive-top3" *ngIf="!cargando">
 
 
   <div *ngFor="let item of top3; let i = index">
-    <div class="card">
+    <div class="card"  [ngClass]="'card-bg-' + i">
       <div class="card-body">
         <!-- wrapper de imagen con la clase dinámica -->
         <div [ngClass]="['img-wrapper', variantes[i]]">
@@ -25,7 +32,7 @@
 </div>
 
 
-<div class="tabla-responsive">
+<div class="tabla-responsive" *ngIf="!cargando">
 
   <table class="tabla">
     <thead>
