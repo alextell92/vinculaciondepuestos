@@ -1,10 +1,10 @@
 .headerMain {
-  background-color: steelblue;
+  background-color:#1f618d;
   color: white;
   padding: 0 5px 0 5px;
   border: 1px solid #000;
-
   justify-items: right;
+  height: 80px;
 }
 
 .cuenta {
