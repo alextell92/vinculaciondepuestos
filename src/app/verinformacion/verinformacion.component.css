@@ -8,10 +8,11 @@
 
 .tabla-responsive-top3 {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  width: 100%;
   overflow-x: auto;
   padding: 20px;
+  gap: 5px;
 }
 
 .tabla {
@@ -37,4 +38,144 @@
   .tabla-responsive-top3 {
     width: 100%;
   }
+}
+
+
+
+
+/* ================================================================
+   CSS COMÚN
+   ================================================================ */
+   .img-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 5px;               /* Grosor del “borde” */
+    border-radius: 8px;         /* Ajusta si quieres más o menos redondez */
+    overflow: visible;
+  }
+  
+  .img-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -5px; left: -5px;
+    right: -5px; bottom: -5px;
+    border-radius: inherit;
+    border: 5px solid transparent;
+    z-index: 0;                 /* Detrás de la imagen */
+    animation:
+      spin 3s linear infinite,  /* Rotación continua */
+      glow 2s ease-in-out infinite alternate; /* Pulsado del glow */
+    pointer-events: none;
+  }
+  
+  .img-wrapper img {
+    display: block;
+    position: relative;
+    z-index: 1;                 /* Encima del pseudo-elemento */
+    border-radius: 4px;         /* Si quieres esquinas suaves */
+  }
+  
+  /* Rotación */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Glow pulsante */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 8px 2px currentColor;
+    }
+    100% {
+      box-shadow: 0 0 20px 6px currentColor;
+    }
+  }
+
+  .contenidoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  card{
+    gap:20px
+  }
+
+
+  
+ /* ================================================================
+   CSS COMÚN
+   ================================================================ */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 5px;               /* Grosor del “borde” */
+  border-radius: 8px;         /* Ajusta si quieres más o menos redondez */
+  overflow: visible;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px;
+  right: -5px; bottom: -5px;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  z-index: 0;                 /* Detrás de la imagen */
+  animation:
+    spin 3s linear infinite,  /* Rotación continua */
+    glow 2s ease-in-out infinite alternate; /* Pulsado del glow */
+  pointer-events: none;
+}
+
+.img-wrapper img {
+  display: block;
+  position: relative;
+  z-index: 1;                 /* Encima del pseudo-elemento */
+  border-radius: 2px;         /* Si quieres esquinas suaves */
+}
+
+/* Rotación */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Glow pulsante */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px 2px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 20px 6px currentColor;
+  }
+}
+
+/* ================================================================
+   VARIANTES DE COLOR (usamos currentColor para que el glow herede)
+   ================================================================ */
+/* DORADO */
+.img-wrapper.gold {
+  color: #FFD700; /* color base dorado intenso */
+}
+.img-wrapper.gold::before {
+  /* degradado sólido dorado */
+  border-image: conic-gradient(#FFD700, #FFD700) 1;
+}
+
+/* PLATEADO */
+.img-wrapper.silver {
+  color: #C0C0C0; /* color base plata */
+}
+.img-wrapper.silver::before {
+  border-image: conic-gradient(#C0C0C0, #C0C0C0) 1;
+}
+
+/* BRONCE */
+.img-wrapper.bronze {
+  color: #CD7F32; /* color base bronce */
+}
+.img-wrapper.bronze::before {
+  border-image: conic-gradient(#CD7F32, #CD7F32) 1;
 }

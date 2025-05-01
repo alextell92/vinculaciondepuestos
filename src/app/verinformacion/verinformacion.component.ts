@@ -9,7 +9,10 @@ import { ControlService } from "../services/control.service";
 export class VerinformacionComponent {
   datos: any[] = [];
   top3: any[] = [];
+
+  imagenes: any[] = ['../../assets/1.png','../../assets/2.png','../../assets/3.png'];
   total: any;
+variantes: any[]=['gold','silver','bronze'];
 
   constructor(private controlService: ControlService) {
     this.controlService.obtenerDatos().subscribe((resp) => {
@@ -41,10 +44,15 @@ const arreglo= this.datos.map(data => {
   const puntajeTotal = criterios.reduce((sum, key) => sum + parseInt(data[key] || '0'), 0);
   return {
     nombreTrabajador: data.nombreTrabajador,
-    puntajeTotal
+    puntajeTotal,
+    puesto:data.puesto
   };
 }).sort((a, b) => b.puntajeTotal - a.puntajeTotal); // ordenar de mayor a menor
 this.top3 = arreglo.slice(0, 3);
+
+
+
+
 
     
   }
