@@ -13,6 +13,8 @@ export class VerinformacionComponent {
   constructor(private controlService: ControlService) {
     this.controlService.obtenerDatos().subscribe((resp) => {
       this.datos = resp;
+  
+      
     });
   }
 
@@ -22,8 +24,7 @@ export class VerinformacionComponent {
        + Number(item.experiencia)
        + Number(item.habilidadMental)
        + Number(item.preparacionAcademica)
-       + Number(item.responsabilidad)
-       + Number(item.puesto);
+       + Number(item.responsabilidad);
   }
 
 
