@@ -145,43 +145,43 @@ export class ListasValuacionService {
     this.puestos_list = [
       {
         value: 1,
-        descripcion: "Jefe de mantenimiento",
+        descripcion: "Director General",
       },
       {
         value: 2,
-        descripcion: "Fogonero",
+        descripcion: "Gerente de Operaciones",
       },
       {
         value: 3,
-        descripcion: "Operador de caldera",
+        descripcion: "Gerente de Finanzas",
       },
       {
         value: 4,
-        descripcion: "Técnico en aire acondicionado y ref.",
+        descripcion: "Gerente de Recursos Humanos",
       },
       {
         value: 5,
-        descripcion: "Electricista",
+        descripcion: "Gerente de Transporte",
       },
       {
         value: 6,
-        descripcion: "Plomero",
+        descripcion: "Coordinador de Almacén",
       },
       {
         value: 7,
-        descripcion: "Carpintero",
+        descripcion: "Analista de datos Logisticos",
       },
       {
         value: 8,
-        descripcion: "Jardinero",
+        descripcion: "Gerente de Ventas",
       },
       {
         value: 9,
-        descripcion: "Albañil",
+        descripcion: "Asistente Administrativo",
       },
       {
         value: 10,
-        descripcion: "Pintor",
+        descripcion: "Recepcionista",
       }
     ];
   }
