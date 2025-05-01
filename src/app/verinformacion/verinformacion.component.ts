@@ -12,15 +12,37 @@ export class VerinformacionComponent {
 
   imagenes: any[] = ['../../assets/1.png','../../assets/2.png','../../assets/3.png'];
   total: any;
+  cargando: boolean = true;
+
+ocultarLoader: boolean = false;
+  
+
 variantes: any[]=['gold','silver','bronze'];
 
   constructor(private controlService: ControlService) {
+
+   
+   
+  }
+
+
+  ngOnInit(){
+    const inicioCarga = Date.now();
+
     this.controlService.obtenerDatos().subscribe((resp) => {
       this.datos = resp;
-      this.obtenertop3()
-      
+      this.obtenertop3();
+  
+      const tiempoTranscurrido = Date.now() - inicioCarga;
+      const tiempoRestante = Math.max(0, 900 - tiempoTranscurrido);
+  
+      setTimeout(() => {
+        this.ocultarLoader = true; // activa fade
+        setTimeout(() => {
+          this.cargando = false; // oculta del DOM después del fade
+        }, 500); // fade-out de 0.5 segundos
+      }, tiempoRestante);
     });
-   
   }
 
   getTotal(item: any): number {
