@@ -14,6 +14,7 @@ import { EscalasPuntuacionFormComponent } from './components/escalas-puntuacion-
 import { ComparacionSalarialFormComponent } from './components/comparacion-salarial-form/comparacion-salarial-form.component';
 import { PlanComunicacionFormComponent } from './components/plan-comunicacion-form/plan-comunicacion-form.component';
 import { EvaluacionPuestosFormComponent } from './components/evaluacion-puestos-form/evaluacion-puestos-form.component';
+import { ListadoEvaluacionesComponent } from './listado-evaluaciones/listado-evaluaciones.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EvaluacionPuestosFormComponent } from './components/evaluacion-puestos-
     ComparacionSalarialFormComponent,
     PlanComunicacionFormComponent,
     EvaluacionPuestosFormComponent,
+    ListadoEvaluacionesComponent,
   ],
   imports: [
     BrowserModule,

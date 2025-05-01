@@ -7,6 +7,7 @@ import { EscalasPuntuacionFormComponent } from './components/escalas-puntuacion-
 import { ComparacionSalarialFormComponent } from './components/comparacion-salarial-form/comparacion-salarial-form.component';
 import { PlanComunicacionFormComponent } from './components/plan-comunicacion-form/plan-comunicacion-form.component';
 import { EvaluacionPuestosFormComponent } from './components/evaluacion-puestos-form/evaluacion-puestos-form.component';
+import { ListadoEvaluacionesComponent } from './listado-evaluaciones/listado-evaluaciones.component';
 
 const routes: Routes = [
   { path: "Home", component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "comparacionSalarial",component:ComparacionSalarialFormComponent},
   {path: "planComunicacion",component:PlanComunicacionFormComponent},
   {path: "evaluacionPuestos",component:EvaluacionPuestosFormComponent},
+  {path: "listadoEvaluaciones",component:ListadoEvaluacionesComponent},
 
   //Esta ruta, siempre debe ir al final, de lo contrario no permite navegar a las rutas que coloquemos despues
   { path: "**", pathMatch: "full", redirectTo: "/Home" },

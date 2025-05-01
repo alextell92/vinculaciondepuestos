@@ -1,5 +1,22 @@
 
+<div class="tabla-responsive-top3">
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th style="background-color:rgb(252, 243, 207); color: gray;">Nombre</th>
+        <th style="background-color:rgb(252, 243, 207); color: gray;">Suma</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of top3">
+        <td>{{ item.nombreTrabajador }}</td>
+        <td>{{ item.puntajeTotal }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div class="tabla-responsive">
+
   <table class="tabla">
     <thead>
       <tr>
